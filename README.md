@@ -1,10 +1,6 @@
 # OP-ETHGLOBAL-Guides
 
 ---
-id: 
-slug: introduction-to-optimism
-description: Intro to Optimism
----
 
 
 <Section name="1. Introduction" description="Introduction to Optimism">
