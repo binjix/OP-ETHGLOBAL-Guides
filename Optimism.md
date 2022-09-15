@@ -21,9 +21,26 @@ Together we will dispel the myth that public goods cannot be profitable. Public 
   
 ## 2. How It Works
   
+[Ethereum has limited capacity](https://ethereum.org/en/layer-2/) because of the [blockchain trilemma](https://medium.com/certik/the-blockchain-trilemma-decentralized-scalable-and-secure-e9d8c41a87b3). 
+To have decentralization we need to enable as many people as possible to run a node, which means that the number of transactions that can be processed per minute is limited by the capacity of standard hardware. 
+This limits our ability to scale, unless we accept the security implication of not having every node process every transaction.
+
+Solutions that build on top on Ethereum are called layer 2 or L2 (with Ethereum itself called layer 1 or L1). 
+Optimism uses a type of solution called an [optimistic rollup](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/).
+*Rollups* post all transactions on layer 1, so data integrity and availability are provided by Ethereum. 
+ 
+*Optimistic Rollups* use economic incentives to ensure the data processing, done offchain, is done correctly. 
+The sequencer posts the merkle root of the blockchain state on L1 (called the *state root*).
+Other nodes, called verifiers, can issue a *fault challenge* if they believe the state root is incorrect.
+In the case of a fault challenge part of the transaction is executed on L1 to verify which is the correct state root.
+  
+Sequencers that post correct state roots, and verifiers that challenge incorrect ones, are rewarded.
+Sequencers that post incorrest state roots, and verifiers that challenge correct ones, are penalized.
+Because 
+
 </Section>
 
-<Section name="" description="A simple exercise to use the Optimism network">  
+<Section name="3. Using Optimism" description="A simple exercise to use the Optimism network">  
   
 ## 3. Using Optimism
   
