@@ -37,10 +37,17 @@ In the case of a fault challenge part of the transaction is executed on L1 to ve
 Sequencers that post correct state roots, and verifiers that challenge incorrect ones, are rewarded for their honesty.
 Sequencers that post incorrest state roots are penalized for dishonesty.
 Verifiers that challenge correct results, which could be used as a denial of service attack, are penalized.
-As long as there is at least one honest verifier, the state will end up being the correct one - and the incentives are aligned with hoensty.
+If a state is not challenged for the challenge period (seven days on the production network), it is assumed to be correct. 
+As long as there is at least one honest verifier, the state will end up being the correct one - and the economic incentives are aligned with honesty. 
   
-[For a video explanation that goes deeper into the details, see here](https://www.youtube.com/watch?v=f4YkMj3Vijs).
+[We have a bridge](https://app.optimism.io/bridge) that allows users to deposit into Optimism and withdraw from it using this mechanism.
+A withdrawal requires you to waiting the challenge period (until the blockchain state becomes indisputable), but faster withdrawals are available from [third party bridges](https://www.optimism.io/apps/bridges) that run their own verifiers so they **know** the state submitted is correct. 
+ 
+[For a video explanation that goes deeper into the details of how Optimism works, see here](https://www.youtube.com/watch?v=f4YkMj3Vijs).
 
+**Note:** Currently Optimism is running the sole sequencer because we don't have the fault challenges running yet.
+However, there are already many verifiers watching us to make sure this 
+  
 </Section>
 
 <Section name="3. Using Optimism" description="A simple exercise to use the Optimism network">  
