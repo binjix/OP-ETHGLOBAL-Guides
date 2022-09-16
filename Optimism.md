@@ -30,13 +30,16 @@ Optimism uses a type of solution called an [optimistic rollup](https://ethereum.
 *Rollups* post all transactions on layer 1, so data integrity and availability are provided by Ethereum. 
  
 *Optimistic Rollups* use economic incentives to ensure the data processing, done offchain, is done correctly. 
-The sequencer posts the merkle root of the blockchain state on L1 (called the *state root*).
-Other nodes, called verifiers, can issue a *fault challenge* if they believe the state root is incorrect.
+The *sequencer* node posts the merkle root of the blockchain state on L1 (called the *state root*).
+Other nodes, called *verifiers*, can issue *fault challenges* if they believe the state root is incorrect.
 In the case of a fault challenge part of the transaction is executed on L1 to verify which is the correct state root.
   
-Sequencers that post correct state roots, and verifiers that challenge incorrect ones, are rewarded.
-Sequencers that post incorrest state roots, and verifiers that challenge correct ones, are penalized.
-Because 
+Sequencers that post correct state roots, and verifiers that challenge incorrect ones, are rewarded for their honesty.
+Sequencers that post incorrest state roots are penalized for dishonesty.
+Verifiers that challenge correct results, which could be used as a denial of service attack, are penalized.
+As long as there is at least one honest verifier, the state will end up being the correct one - and the incentives are aligned with hoensty.
+  
+[For a video explanation that goes deeper into the details, see here](https://www.youtube.com/watch?v=f4YkMj3Vijs).
 
 </Section>
 
