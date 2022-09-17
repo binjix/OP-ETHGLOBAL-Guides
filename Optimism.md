@@ -64,6 +64,11 @@ However, there are already many verifiers watching us to make sure this power is
   
 ## 3. Using Optimism
   
+
+You can follow these directions to see how easy it is to use Optimism from [the Remix IDE](https://remix.ethereum.org/). 
+If you prefer to use a different development stack, [follow the steps in this exercise](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/getting-started).
+We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equivalence-5c2021deb306), so whatever method you are comfortable using in L1 Ethereum we support.
+  
 1. Add Optimism Goerli to your wallet, using [this link](https://chainid.link/?network=optimism-goerli).
 
 1. Log on with your wallet to Optimism Goerli.
@@ -111,11 +116,6 @@ However, there are already many verifiers watching us to make sure this power is
    <img src="assets/remix-tx.png" width="300" />
 
 1. See the results on the console and then click **greet** again to see the greeting changed.   
-
-  
- 
-If you prefer to use a different development stack, [follow the steps in this exercise](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/getting-started).
-We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equivalence-5c2021deb306), so whatever method you are comfortable using in L1 Ethereum we support.
 
 </Section>
 
