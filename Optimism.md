@@ -52,13 +52,11 @@ A withdrawal requires you to waiting the challenge period (until the blockchain 
 Currently Optimism is running the sole sequencer because we don't have the fault challenges running yet.
 However, there are already many verifiers watching us to make sure this power is not abused.
 [We are working hard at decentralization](https://medium.com/ethereum-optimism/our-pragmatic-path-to-decentralization-cb5805ca43c1).
-We are currently (late 2022) busy on step 2.
-  
-1. Form a fellowship of Optimists
-2. **We are here** Release Bedrock, enabling a multi-client architecture
-3. Support (directly or indirectly) the creation of alternative Optimism clients
-4. Ship the multi-client proof contracts
-5. Either renounce the power to upgrade the contracts further, or transfer it to [the most trusted address in Ethereum](https://etherscan.io/address/0x0000000000000000000000000000000000000000).
+
+1. Release Bedrock, enabling a multi-client architecture
+2. Support (directly or indirectly) the creation of alternative Optimism clients
+3. Ship the multi-client proof contracts
+4. Either renounce the power to upgrade the contracts further, or transfer it to [the most trusted address in Ethereum](https://etherscan.io/address/0x0000000000000000000000000000000000000000).
   
 </Section>
 
@@ -66,7 +64,57 @@ We are currently (late 2022) busy on step 2.
   
 ## 3. Using Optimism
   
-[Follow the steps in this exercise](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/getting-started) to interact with Optimism using your favorite development stack.
+1. Add Optimism Goerli to your wallet, using [this link](https://chainid.link/?network=optimism-goerli).
+
+1. Log on with your wallet to Optimism Goerli.
+
+1. Browse to [Remix](https://remix.ethereum.org/).
+1. Click the run icon (<img src="assets/remix-run-icon.png" height="24" valign="top" />).
+1. Select the Environment **Injected Web3 Provider**.
+1. Accept the connection in the wallet.
+
+### Greeter interaction
+
+1. Click the run icon (<img src="assets/remix-run-icon.png" height="24" valign="top" />).
+
+1. Make sure your environment is **Injected Web3** and the network ID is **420**.
+
+   <img src="assets/remix-env.png" width="300" />
+
+1. Click the files icon (<img src="assets/remix-files-icon.png" height="24" valign="top" />).
+
+1. Download [Greeter.sol](contracts/Greeter.sol) and upload (<img src="assets/remix-upload-icon.png" height="24" valign="top" />) it to Remix under **contracts**.
+
+1. Right-click **contracts > Greeter.sol** and select **Compile**.
+
+1. Open **contracts > artifacts** and see that there's a `Greeter.json` file. This file is the compiled version, the API for the contract, etc.
+
+1. Click the run icon (<img src="assets/remix-run-icon.png" height="24" valign="top" />).
+
+   If you do not have Goerli ETH, get some using [our faucet](https://optimismfaucet.xyz/).
+   You just need to follow five people or projects on github.
+
+1. Scroll down. 
+   In the At Address field, type the contract address (`0x106941459A8768f5A92b770e280555FAF817576f`).
+   Then, click **At Address**. 
+   Expand the contract to see you can interact with it.
+
+   <img src="assets/remix-connect.png" width="300" />
+
+1. Click **greet** and expand the transaction result in the console (bottom right).
+
+   ![](assets/remix-query.png)
+
+1. Type a greeting and then click **setGreeting**. Approve the transaction in your wallet. 
+   Note that if the greeting includes a comma you need to enclose it in quotes.
+
+   <img src="assets/remix-tx.png" width="300" />
+
+1. See the results on the console and then click **greet** again to see the greeting changed.   
+
+  
+ 
+If you prefer to use a different development stack, [follow the steps in this exercise](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/getting-started) to interact with Optimism using your favorite development stack.
 
 </Section>
 
