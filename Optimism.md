@@ -114,7 +114,8 @@ However, there are already many verifiers watching us to make sure this power is
 
   
  
-If you prefer to use a different development stack, [follow the steps in this exercise](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/getting-started) to interact with Optimism using your favorite development stack.
+If you prefer to use a different development stack, [follow the steps in this exercise](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/getting-started).
+We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equivalence-5c2021deb306), so whatever method you are comfortable using in L1 Ethereum we support.
 
 </Section>
 
