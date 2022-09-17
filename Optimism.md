@@ -12,8 +12,10 @@ description: Intro to Optimism
 The [Optimism Collective](https://app.optimism.io/announcement) is a band of companies, communities, and citizens working together to reward public goods and build a sustainable future for Ethereum.
 
 Together we will dispel the myth that public goods cannot be profitable. Public goods (such as Optimism and Ethereum) often go underfunded when incentives aren't properly aligned, forcing many to make trade-offs between earning a profit and building for the common good. We are bound by a mutually beneficial pact, [our vision](https://www.optimism.io/vision) can be summed up with the equation **Impact = Profit**.
-
 [You can read more about who we are and what we are doing here](http://localhost:8080/docs/governance/#how-can-we-achieve-this).
+
+Whether you are interested in exploring novel forms of human coordination via decentralized governance, re-aligning monetary incentives to be positive-sum for humanity through retroactive funding, creating novel dApps that were not possible before, or growing Ethereum technically and philosophically, The Optimism Collective has room for you.
+We could use your help, and if you make valuable contributions we'll be happy to see they are properly rewarded.
   
 </Section>
 
@@ -45,8 +47,18 @@ A withdrawal requires you to waiting the challenge period (until the blockchain 
  
 [For a video explanation that goes deeper into the details of how Optimism works, see here](https://www.youtube.com/watch?v=f4YkMj3Vijs).
 
-**Note:** Currently Optimism is running the sole sequencer because we don't have the fault challenges running yet.
-However, there are already many verifiers watching us to make sure this 
+### Path to decentralization
+
+Currently Optimism is running the sole sequencer because we don't have the fault challenges running yet.
+However, there are already many verifiers watching us to make sure this power is not abused.
+[We are working hard at decentralization](https://medium.com/ethereum-optimism/our-pragmatic-path-to-decentralization-cb5805ca43c1).
+We are currently (late 2022) busy on step 2.
+  
+1. Form a fellowship of Optimists
+2. **We are here** Release Bedrock, enabling a multi-client architecture
+3. Support (directly or indirectly) the creation of alternative Optimism clients
+4. Ship the multi-client proof contracts
+5. Either renounce the power to upgrade the contracts further, or transfer it to [the most trusted address in Ethereum](https://etherscan.io/address/0x0000000000000000000000000000000000000000).
   
 </Section>
 
