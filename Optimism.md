@@ -138,7 +138,7 @@ We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equi
 - [User docs](https://help.optimism.io/hc/en-us)
 - [Developer docs](https://community.optimism.io/)
 - [Discord](https://discord-gateway.optimism.io/)
-- [If you don't know what to build]()
+- [If you don't know what to build](https://web.telegram.org/k/#-1645849954)
   
 </Section>  
   
