@@ -135,10 +135,26 @@ We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equi
   
 ## 5. Getting Involved  
   
+Welcome to Optimism.
+Here is where you can go for additional information.
+       
 - [User docs](https://help.optimism.io/hc/en-us)
 - [Developer docs](https://community.optimism.io/)
-- [Discord](https://discord-gateway.optimism.io/)
-- [If you don't know what to build](https://web.telegram.org/k/#-1645849954)
   
+If you can't find the answer in the docs, or you want to talk with real people (Optimism Foundation, OP Labs PBC, or anybody else in our ecosystem), use our Discord.
+  
+- [Discord](https://discord-gateway.optimism.io/)
+
+What to do next?
+We'd love for you to build on Optimism.
+You don't know what to build? Here are some suggestions.
+
+- [If you don't know what to build](https://web.telegram.org/k/#-1645849954)
+
+Want to work directly with us? We're hiring
+
+- [Optimism Foundation](https://boards.greenhouse.io/optimism)
+- [OP Labs PBC (the technical consultant company)](https://boards.greenhouse.io/oplabs)
+    
 </Section>  
   
