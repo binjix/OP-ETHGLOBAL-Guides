@@ -125,10 +125,16 @@ We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equi
   
 ### NFTs
   
+- [Quix, our biggest NFT marketplace](https://qx.app/)
+  
 ### Launching a token
+    
   
 ### Deploying a Dapp  
 
+If you know how to deploy contracts to L1 Ethereum, there is nothing to put in this section. 
+Just use an [Optimism endpoint](https://community.optimism.io/docs/useful-tools/networks/#rpc-endpoints) and you're done.
+  
 </Section>
 
 <Section name="5. Getting Involved" description="Ways to get involved with Optimism">   
