@@ -126,16 +126,19 @@ We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equi
 ### NFTs
   
 - [Quix, our biggest NFT marketplace](https://qx.app/)
-  
-### Launching a token
-  
-  
-    
+      
   
 ### Deploying a Dapp  
 
-If you know how to deploy contracts to L1 Ethereum, there is nothing for you in this subsection. 
+If you know how to deploy contracts to L1 Ethereum, there is almost nothing for you in this subsection. 
 Just use an [Optimism endpoint](https://community.optimism.io/docs/useful-tools/networks/#rpc-endpoints) and you're done.
+  
+If you are afraid that your users' wallets don't have Optimism set up, add a link to [`https://chainid.link/?network=optimism`](https://chainid.link/?network=optimism) to your user interface.   
+  
+### Launching a token
+  
+A token is just another contract, which is easy to deploy. 
+If you already have an ERC-20 contract on L1, and you wish to deploy to have a bridgeable equivalent on Optimism, [we have directions to help you](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/standard-bridge-standard-token).
   
 </Section>
 
