@@ -11,8 +11,15 @@ description: Intro to Optimism
   
 The [Optimism Collective](https://app.optimism.io/announcement) is a band of companies, communities, and citizens working together to reward public goods and build a sustainable future for Ethereum.
 
-Together we will dispel the myth that public goods cannot be profitable. Public goods (such as Optimism and Ethereum) often go underfunded when incentives aren't properly aligned, forcing many to make trade-offs between earning a profit and building for the common good. We are bound by a mutually beneficial pact, [our vision](https://www.optimism.io/vision) can be summed up with the equation **Impact = Profit**.
+Together we will dispel the myth that public goods cannot be profitable. 
+Public goods (such as Optimism and Ethereum) often go underfunded when incentives aren't properly aligned, forcing many to make trade-offs between earning a profit and building for the common good. 
+We are bound by a mutually beneficial pact, [our vision](https://www.optimism.io/vision) can be summed up with the equation **Impact = Profit**.
 [You can read more about who we are and what we are doing here](https://community.optimism.io/docs/governance/#impact-profit).
+
+We intend to achieve this vision through retroactive public goods funding, funding for public goods that have already proven their usefulness and impact.
+Retroactive public goods funding is advantageous because it is relatively easy to agree on what *is* useful, and see who built it. 
+It is a lot harder to identify in advance what *will be* useful, and *which team* will do the best job of building it. 
+The possibility of an eventual exit payment can also encourage investors to fund initial public good development efforts until the usefulness is obvious, in the same way that the possibility of an eventual IPO or buy out encourages investors to fund startups today.
 
 Whether you are interested in exploring novel forms of human coordination via decentralized governance, re-aligning monetary incentives to be positive-sum for humanity through retroactive funding, creating novel dApps that were not possible before, or growing Ethereum technically and philosophically, The Optimism Collective has room for you.
 We could use your help, and if you make valuable contributions we'll be happy to see they are properly rewarded.
@@ -20,7 +27,26 @@ We could use your help, and if you make valuable contributions we'll be happy to
 Come explore the rest of the guide and dive into the rabbit-hole of possibilities and cement yourself as a part of a community that moves steadfast in furthering the power of Optimism, Ethereum and the Open Internet. 
 Together, we will create the future of coordinated, collaborative cyberspace. 
 Together, we will summon [Ether’s Phoenix](https://optimism.mirror.xyz/x4LGFwa6RJ_opOaCOwr_VGk04Lp3of41H8ynWaFB27E).
+ 
   
+<Quiz id={"opt01"} />
+
+What kind of goods is The Optimism Collective trying to encourage?
+  
+Private goods
+Privacy-preserving goods
+Public goods [✅]
+Impactful goods
+
+<Quiz id={"opt02"} />
+
+When is the best time to identify the impact of a project?
+  
+The design phase
+Once there is a prototype
+As soon as it is deployed
+After it is already in use [✅]
+    
   
 </Section>
 
@@ -51,7 +77,40 @@ As long as there is at least one honest verifier, the state will end up being th
 A withdrawal requires you to waiting the challenge period (until the blockchain state becomes indisputable), but faster withdrawals are available from [third party bridges](https://www.optimism.io/apps/bridges) that run their own verifiers so they **know** the state submitted is correct. 
  
 [For a video explanation that goes deeper into the details of how Optimism works, see here](https://www.youtube.com/watch?v=f4YkMj3Vijs).
+  
+  
+<Quiz id={"opt03"} />
 
+Which of these attributes is *not* part of the blockchain trilemma?
+  
+Security
+Decentralization
+Privacy [✅]
+Scalability  
+  
+  
+<Quiz id={"opt04"} />
+
+What mechanism does Optimism use to ensure data availability?
+  
+Economic incentives
+Mathematics (specifically, zero knowledge proofs)
+Mathematics (specifically, cryptographic hash functions)
+Reliance on L1 Ethereum  [✅]
+
+  
+  
+<Quiz id={"opt05"} />
+
+What mechanism does Optimism use to ensure posted state roots are correct?
+  
+Economic incentives  [✅]  
+Mathematics (specifically, zero knowledge proofs)
+Mathematics (specifically, cryptographic hash functions)
+Reliance on L1 Ethereum  
+  
+  
+  
 ### Path to decentralization
 
 Currently Optimism is running the sole sequencer because we don't have the fault challenges running yet.
@@ -143,6 +202,16 @@ If you are afraid that your users' wallets don't have Optimism set up, add a lin
   
 A token is just another contract, which is easy to deploy. 
 If you already have an ERC-20 contract on L1, and you wish to deploy to have a bridgeable equivalent on Optimism, [we have directions to help you](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/standard-bridge-standard-token).
+  
+
+<Quiz id={"opt06"} />
+
+What is the name of the biggest NFT marketplace on Optimism?
+  
+OpenOcean
+Quix  [✅]  
+Cervantes
+Hidalgo
   
 </Section>
 
