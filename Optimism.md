@@ -12,10 +12,15 @@ description: Intro to Optimism
 The [Optimism Collective](https://app.optimism.io/announcement) is a band of companies, communities, and citizens working together to reward public goods and build a sustainable future for Ethereum.
 
 Together we will dispel the myth that public goods cannot be profitable. Public goods (such as Optimism and Ethereum) often go underfunded when incentives aren't properly aligned, forcing many to make trade-offs between earning a profit and building for the common good. We are bound by a mutually beneficial pact, [our vision](https://www.optimism.io/vision) can be summed up with the equation **Impact = Profit**.
-[You can read more about who we are and what we are doing here](http://localhost:8080/docs/governance/#how-can-we-achieve-this).
+[You can read more about who we are and what we are doing here](https://community.optimism.io/docs/governance/#impact-profit).
 
 Whether you are interested in exploring novel forms of human coordination via decentralized governance, re-aligning monetary incentives to be positive-sum for humanity through retroactive funding, creating novel dApps that were not possible before, or growing Ethereum technically and philosophically, The Optimism Collective has room for you.
 We could use your help, and if you make valuable contributions we'll be happy to see they are properly rewarded.
+  
+Come explore the rest of the guide and dive into the rabbit-hole of possibilities and cement yourself as a part of a community that moves steadfast in furthering the power of Optimism, Ethereum and the Open Internet. 
+Together, we will create the future of coordinated, collaborative cyberspace. 
+Together, we will summon [Ether’s Phoenix](https://optimism.mirror.xyz/x4LGFwa6RJ_opOaCOwr_VGk04Lp3of41H8ynWaFB27E).
+  
   
 </Section>
 
@@ -125,9 +130,8 @@ We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equi
   
 ### NFTs
   
-- [Quix, our biggest NFT marketplace](https://qx.app/)
-      
-  
+See [Quix, our biggest NFT marketplace](https://qx.app/).
+        
 ### Deploying a Dapp  
 
 If you know how to deploy contracts to L1 Ethereum, there is almost nothing for you in this subsection. 
