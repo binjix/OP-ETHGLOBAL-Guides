@@ -190,14 +190,187 @@ We're [EVM-equivalent](https://medium.com/ethereum-optimism/introducing-evm-equi
 ### NFTs
   
 See [Quix, our biggest NFT marketplace](https://qx.app/).
-        
-### Deploying a Dapp  
 
-If you know how to deploy contracts to L1 Ethereum, there is almost nothing for you in this subsection. 
-Just use an [Optimism endpoint](https://community.optimism.io/docs/useful-tools/networks/#rpc-endpoints) and you're done.
-  
-If you are afraid that your users' wallets don't have Optimism set up, add a link to [`https://chainid.link/?network=optimism`](https://chainid.link/?network=optimism) to your user interface.   
-  
+The best way to deploy an NFT Collection on Optimism is to use [thirdweb](https://thirdweb.com/).
+
+Follow the steps below to deploy an ERC721 NFT Collection and create a web3 minting interface like this one:
+
+<video src='https://blog.thirdweb.com/content/media/2022/11/2022-11-02-15-45-44.mp4' width='100%' height='100%' controls></video>
+
+Go to the [thirdweb dashboard](https://thirdweb.com/dashboard) and click on "Deploy new contract".
+
+![thirdweb dashboard](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-8.png)
+
+From the pre-built contracts, select the NFT Drop contract:
+
+![deploy nft drop](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-8.png)
+
+Click `Deploy Now`:
+
+![deploy now button](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-9.png)
+
+Here, you'll be taken to the page to populate the metadata of the NFT Drop contract you're going to deploy. Set up your smart contract with an image, name, description, etc., and configure which wallet address will receive the funds from primary and secondary sales:
+
+![nft drop metadata](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-4.png)
+
+Ensure you select `Optimism (ETH)` if you want to deploy to mainnet, or `Optimism (Goerli)` if you want to use test funds. When you're ready, click Deploy Now!
+
+![deploy nft drop](https://blog.thirdweb.com/content/images/2022/11/image-10.png)
+
+This will deploy your [NFT Drop](https://portal.thirdweb.com/contracts/DropERC721) smart contract to the Optimism network.
+
+Let's see what we can do with it!
+
+<br/>
+
+**Set Up Claim Conditions**
+
+Claim conditions are the criteria that define who, when, and how users can claim an NFT from your drop; such as release dates, allowlists, and claim limits.
+
+To add a claim phase, head to the `Claim Conditions` tab and click `Add Initial Claim Phase`:
+
+![add initial claim phase](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-11.png)
+
+Here, you can configure the price, release date, and more for your NFT drop:
+
+![claim conditions](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-5.png)
+
+Update the details as you want and save the claim phase!
+
+<br/>
+
+**Lazy-Minting NFTs**
+
+Now our claim phases are set up, let's batch-upload some NFTs for the users to mint from our drop under those conditions.
+
+[Lazy minting](https://portal.thirdweb.com/pre-built-contracts/nft-drop#lazy-minting-nfts) is the process of uploading the metadata for your NFT(s) without minting them yet. We're going to lazy-mint the metadata for our NFTs so that other people can mint them!
+
+For this guide, I am going to use the metadata from our [Shapes batch upload example](https://github.com/saminacodes/tw-demo-assets/tree/main/Shapes).
+
+To batch upload and lazy mint your metadata, head to the `NFTs` tab and click on the `Batch Upload` button:
+
+![batch upload button](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-12.png)
+
+Drag and drop your images along with your metadata file(s) into the upload area:
+
+![drag and drop](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-13.png)
+
+Here, you'll be able to preview your NFTs before lazy-minting them:
+
+![preview nfts](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-14.png)
+
+When you're ready, click `Next`!
+
+![next button](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-15.png)
+
+Finally, click `Upload X NFTs` and approve the `Lazy Mint` transaction.
+
+In the background, your metadata is being uploaded and pinned to IPFS, meaning your metadata is immutable and decentralized. Once the transaction goes through, your NFTs are ready to be minted!
+
+Let's see how you can claim/mint the NFTs from the drop now.
+
+<br/>
+
+**Claiming NFTs from the Dashboard**
+
+From the NFTs tab, you can click the Claim button to mint NFTs from your drop directly through the dashboard:
+
+![claim button](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-17.png)
+
+Enter the wallet address and quantity you wish to mint to, and click `Claim NFT`:
+
+![claim nft](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-18.png)
+
+That's it! You've just minted the first NFT from the drop:
+
+![minted nft](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-19.png)
+
+Let's explore how we can create a web3 application on top of our smart contract to allow users to connect their wallets and mint NFTs now.
+
+<br/>
+
+**Creating a Web3 Application**
+
+To get started, head to your terminal and create a new Next.js application with the thirdweb SDK pre-configured:
+
+```bash
+npx thirdweb@latest create --app --next --js
+```
+
+First, head to the `pages/_app.js` file and configure your network to be Optimism:
+
+```jsx
+// This is the chainId your dApp will work on.
+// Use "Optimism" for mainnet or "OptimismGoerli" for testnet.
+const activeChainId = ChainId.OptimismGoerli;
+```
+
+Let's create a simple application that users can mint from, like this:
+
+![nft drop app](https://blog.thirdweb.com/content/images/size/w1000/2022/11/image-7.png)
+
+Head to the homepage (`pages/index.js`). First, we'll use the [`useContract`](https://portal.thirdweb.com/react/react.usecontract) hook to connect to our smart contract using its address (which you can get from the dashboard):
+
+```jsx
+const { contract: nftDrop } = useContract("YOUR_DROP_ADDRESS");
+```
+
+To get the metadata of our smart contract, we will use the [`useContractMetadata`](https://portal.thirdweb.com/react/react.usecontractmetadata) hook like this:
+
+```jsx
+const { data: contractMetadata, isLoading } = useContractMetadata(nftDrop);
+```
+
+Then, we'll create a simple UI to render the image using the MediaRenderer component, the name of our smart contract, and use the Web3Button to allow users to connect their wallet and mint NFTs from our drop using the claim function:
+
+```jsx
+import {
+  MediaRenderer,
+  useContract,
+  useContractMetadata,
+  Web3Button,
+} from "@thirdweb-dev/react";
+import styles from "../styles/Home.module.css";
+
+const Home = () => {
+  const { contract: nftDrop } = useContract("YOUR_DROP_ADDRESS");
+  const { data: contractMetadata, isLoading } = useContractMetadata(nftDrop);
+
+  if (isLoading) {
+    return <div className={styles.container}>Loading...</div>;
+  }
+
+  return (
+    <div className={styles.container}>
+      <MediaRenderer
+        src={contractMetadata.image}
+        alt={contractMetadata.name}
+        style={{
+          width: "200px",
+        }}
+      />
+
+      <p>{contractMetadata.name}</p>
+
+      <Web3Button
+        contractAddress={"YOUR_DROP_ADDRESS"}
+        action={(contract) => contract.erc721.claim(1)}
+        onSuccess={() => alert("Claimed!")}
+        onError={(error) => alert(error.message)}
+      >
+        Claim NFT
+      </Web3Button>
+    </div>
+  );
+};
+
+export default Home;
+```
+
+> Remember to replace `"YOUR_DROP_ADDRESS"` with your smart contract address.
+
+From the terminal, run the `npm run dev` command and visit `localhost:3000` to preview your app.        
+ 
 ### Launching a token
   
 A token is just another contract, which is easy to deploy. 
